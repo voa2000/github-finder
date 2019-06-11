@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import Navbar from "./components/layout/Navbar";
 import Users from "./components/users/Users";
+import Search from "./components/users/Search";
+
 import axios from "axios";
 class App extends Component {
   state = {
@@ -15,8 +17,6 @@ class App extends Component {
       {process.env.REACT_APP_GITHUB_CLIENT_ID} & client_secret=
       ${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
     );
-
-    console.log(res.data);
     this.setState({ users: res.data, loading: false });
   }
   render() {
@@ -25,6 +25,7 @@ class App extends Component {
       <div className='App'>
         <Navbar />
         <div className='container'>
+          <Search />
           <Users loading={loading} users={users} />
         </div>
       </div>
