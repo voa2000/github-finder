@@ -1,11 +1,11 @@
+##Github Finder
+React app to search Github profiles. This app uses the Context API along with the useContext and useReducer hooks for state management and is part of the "Modern React Front To Back" Usemy course
 
-## Github Finder
-The app will enable you to find github users and their repositories.
-In the project directory, you can run:
+#Usage
+npm install
+npm start
+Runs the app in the development mode.
+Open http://localhost:3000
 
-#Clone Project
-#Install npm i
-
-# install dependencies Axios
-
-# npm start to run application
+npm run build
+Builds the app for production to the build folder.
