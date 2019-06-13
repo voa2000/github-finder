@@ -8,8 +8,10 @@ import axios from "axios";
 class App extends Component {
   state = {
     users: [],
-    loading: false
+    loading: false,
+    msg: null
   };
+
   // async componentWillMount() {
   //   this.setState({ loading: true });
   //   const res = await axios.get(
@@ -19,6 +21,7 @@ class App extends Component {
   //   );
   //   this.setState({ users: res.data, loading: false });
   // }
+  // This is to clear usernames in the text box
   clearUsers = () => this.setState({ users: [], loading: false });
   searchUsers = async text => {
     this.setState({ loading: true });
@@ -29,8 +32,9 @@ class App extends Component {
     );
     this.setState({ users: res.data.items, loading: false });
   };
+  setAlert = (msg, type) => this.setState({ alert: { msg, type } });
   render() {
-    const { clearUsers, searchUsers, loading, users } = this.state;
+    const { setAlert, clearUsers, searchUsers, loading, users } = this.state;
     return (
       <div className='App'>
         <Navbar />
@@ -39,6 +43,7 @@ class App extends Component {
             searchUsers={searchUsers}
             clearUsers={clearUsers}
             showClear={users.length > 0 ? true : false}
+            setAlert={setAlert}
           />
           <Users loading={loading} users={users} />
         </div>
