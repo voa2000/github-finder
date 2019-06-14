@@ -32,13 +32,7 @@ class App extends Component {
     setTimeout(() => this.setState({ alert: null }), 5000);
   };
   render() {
-    const {
-      alert,
-      setAlert,
-
-      loading,
-      users
-    } = this.state;
+    const { alert, loading, users } = this.state;
     return (
       <div className='App'>
         <Navbar />
