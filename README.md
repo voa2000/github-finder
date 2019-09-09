@@ -1,7 +1,7 @@
 ## Github Finder
 React app to search Github profiles. This app uses the Context API along with the useContext and useReducer hooks for state management and is part of the "Modern React Front To Back" Usemy course
 
-# Usage
+## Usage
 * npm install
 * npm start
 * Runs the app in the development mode.
@@ -9,4 +9,4 @@ React app to search Github profiles. This app uses the Context API along with th
 
 npm run build
 Builds the app for production to the build folder.
-# Currently editing to use Hooks and react context.
+## Currently editing to use Hooks and react context.
